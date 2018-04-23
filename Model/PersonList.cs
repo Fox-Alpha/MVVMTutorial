@@ -37,7 +37,7 @@ namespace Model
 
         public IPerson AddPerson()
         {
-            var person = new Person();
+            var person = new Person(){ Name = "New Person Entry" };
             Persons.Add(person);
             return person;
         }
