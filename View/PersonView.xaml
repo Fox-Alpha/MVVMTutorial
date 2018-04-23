@@ -13,10 +13,14 @@
         <StackPanel Width="300">
             <TextBox Text="{Binding Name}" />
             <TextBox Text="{Binding Street}" />
-            <StackPanel Orientation="Horizontal">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 <TextBox Text="{Binding PostalCode}" />
-                <TextBox Text="{Binding City}" />
-            </StackPanel>
+                <TextBox Text="{Binding City}" Grid.Column="1"/>
+            </Grid>
         </StackPanel>
     </StackPanel>
 </UserControl>
