@@ -3,6 +3,8 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
+using System;
+
 namespace Model
 {
 
@@ -11,14 +13,21 @@ namespace Model
     /// </summary>
     public class Person : IPerson
     {
+        public string strGuid { get; set; }
         public string Name { get; set; }
         public string Street { get; set; }
         public int PostalCode { get; set; }
         public string City { get; set; }
 
+        public Person()
+        {
+            strGuid = Guid.NewGuid().ToString();
+        }
+
         public override int GetHashCode()
         {
-            return PostalCode;
+            return strGuid;
+            //return PostalCode;
         }
 
         public override bool Equals(object obj)
