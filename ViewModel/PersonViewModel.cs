@@ -13,6 +13,22 @@ namespace ViewModel
     /// </summary>
     public class PersonViewModel : ViewModel<IPerson>, IPersonViewModel
     {
+        public string strGuid
+        {
+            get
+            {
+                return Model.strGuid;
+            }
+            set
+            {
+                if (strGuid != value)
+                {
+                    Model.strGuid = value;
+                    this.OnPropertyChanged("strGuid");
+                }
+            }
+        }
+
         public string Name
         {
             get

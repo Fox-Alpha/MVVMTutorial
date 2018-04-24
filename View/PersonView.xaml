@@ -4,11 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d"
-             Background="White">
-    <StackPanel Orientation="Horizontal">
+             Background="#FF1C1C1C" Foreground="#FF99C7E6">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="GUID:" Width="50"/>
+            <TextBlock Text="{Binding strGuid}" MinWidth="10"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
         <StackPanel>
-            <TextBlock Text="Name:" />
-            <TextBlock Text="Address:" />
+                <TextBlock Text="Name:"  Width="50"/>
+                <TextBlock Text="Address:"  Width="50"/>
         </StackPanel>
         <StackPanel Width="300">
             <TextBox Text="{Binding Name}" />
@@ -22,5 +27,6 @@
                 <TextBox Text="{Binding City}" Grid.Column="1"/>
             </Grid>
         </StackPanel>
+    </StackPanel>
     </StackPanel>
 </UserControl>

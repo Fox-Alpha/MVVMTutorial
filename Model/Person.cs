@@ -26,7 +26,7 @@ namespace Model
 
         public override int GetHashCode()
         {
-            return strGuid;
+            return strGuid.GetHashCode();
             //return PostalCode;
         }
 
